@@ -54,6 +54,22 @@
 			<version>3.17</version>
 			<scope>compile</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.local</groupId>
+			<artifactId>Local</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>restassured</groupId>
+			<artifactId>RestAssured</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>4.0.0</version>
+		</dependency>
 	</dependencies>
 
 

@@ -22,7 +22,7 @@ public class BrowserFactory {
 			System.setProperty("webdriver.gecko.driver", "./Drivers/geckodriver.exe");
 			driver=new FirefoxDriver();
 		}
-		else if (browserName.equals("IE"))
+		else if (browserName.equals("edge"))
 		{	
 			System.setProperty("webdriver.edge.driver", "./Drivers/msedgedriver.exe");
 			driver=new EdgeDriver();		

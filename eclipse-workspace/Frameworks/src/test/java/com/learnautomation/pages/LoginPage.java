@@ -18,9 +18,8 @@ public class LoginPage extends BaseClass {
 	
 	public void LoginToCRM(String usernameApplication,String passwordApplication)
 	{
-		
 		uname.sendKeys(usernameApplication);
 		pass.sendKeys(passwordApplication);
 		loginButton.click();
 	}
-}
+	}
