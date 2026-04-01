@@ -15,14 +15,15 @@ import com.aventstack.extentreports.ExtentTest;
 import com.learnautomation.utilities.BrowserFactory;
 import com.learnautomation.utilities.ConfigDataProvider;
 import com.learnautomation.utilities.ExcelDataProvider;
+import com.learnautomation.utilities.Helper;
 
 public class BaseClass {
 	
 	public WebDriver driver;
 	public ExcelDataProvider excel;
 	public ConfigDataProvider config;
-	public ExtentReports report;
-	public ExtentTest logger;
+	//public ExtentReports report;
+	//public ExtentTest logger;
 	
 	@BeforeSuite
 	public void setUpSuite() 
@@ -30,8 +31,7 @@ public class BaseClass {
 		excel=new ExcelDataProvider();
 		config=new ConfigDataProvider();
 		
-		
-		
+			
 		/*ExtentHtmlReporter extent=new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Reports/FreeCRM.html"));
 		report=new ExtentReports();
 		report.attachReporter(extent);*/	
@@ -49,15 +49,20 @@ public class BaseClass {
 		BrowserFactory.quitBrowser(driver);
 	}
 	
-	/*@AfterMethod
+	@AfterMethod
 	public void tearDownMethod(ITestResult result) 
 	{
 		if(result.getStatus()==ITestResult.FAILURE) {
 			Helper.captureScreenshot(driver);
 		}
+		}
 	
-	report.flush();*/
-
 }
+
+	
+	
+
+
+
 
 

@@ -1,6 +1,7 @@
 package com.learnautomation.utilities;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,7 +13,7 @@ public class BrowserFactory {
 	
 	public static WebDriver startApplication(WebDriver driver, String browserName, String appURL) 
 	{
-		if (browserName.equals("chrome"))
+		if (browserName.equalsIgnoreCase("chrome"))
 		{
 			System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
 			driver=new ChromeDriver();
@@ -30,13 +31,12 @@ public class BrowserFactory {
 		else
 		{
 			System.out.println("We do not support this browser");
-			
 		}
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get(appURL);
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		return driver;
-	}
+		}
 	
 	public static void quitBrowser(WebDriver driver) {
 		{

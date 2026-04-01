@@ -7,9 +7,9 @@ import org.openqa.selenium.support.FindBy;
 public class LoginPage extends BaseClass {
 	
 	WebDriver driver;
-	public LoginPage(WebDriver ldriver) 
+	public LoginPage(WebDriver driver) 
 	{
-		this.driver=ldriver;
+		this.driver=driver;
 	}
 	
 	@FindBy(name="USERNAME") WebElement uname;
